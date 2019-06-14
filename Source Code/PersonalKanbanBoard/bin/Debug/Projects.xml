@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<ArrayOfProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Project>
+    <ProjectId>1</ProjectId>
+    <ProjectTitle>Join gym</ProjectTitle>
+    <ProjectDescription>join gym inorder to loose weight and stay healthy</ProjectDescription>
+    <StartDate>15-06-2019</StartDate>
+    <EndDate>30-06-2019</EndDate>
+    <ToDoLimit>5</ToDoLimit>
+    <WorkInProgressLimit>2</WorkInProgressLimit>
+    <DoneLimit>5</DoneLimit>
+  </Project>
+  <Project>
+    <ProjectId>2</ProjectId>
+    <ProjectTitle>Learn ML</ProjectTitle>
+    <ProjectDescription>Learn machine learning and do practical implementation of the concepts inorder to develop it as a skill</ProjectDescription>
+    <StartDate>13-06-2019</StartDate>
+    <EndDate>30-06-2019</EndDate>
+    <ToDoLimit>6</ToDoLimit>
+    <WorkInProgressLimit>1</WorkInProgressLimit>
+    <DoneLimit>6</DoneLimit>
+  </Project>
+  <Project>
+    <ProjectId>4</ProjectId>
+    <ProjectTitle>Develop app</ProjectTitle>
+    <ProjectDescription>develop and android application as mobile computing module project</ProjectDescription>
+    <StartDate>13-06-2019</StartDate>
+    <EndDate>30-08-2019</EndDate>
+    <ToDoLimit>8</ToDoLimit>
+    <WorkInProgressLimit>3</WorkInProgressLimit>
+    <DoneLimit>8</DoneLimit>
+  </Project>
+  <Project>
+    <ProjectId>5</ProjectId>
+    <ProjectTitle>WPF application</ProjectTitle>
+    <ProjectDescription>learn and develop wpf application as per ACS module.</ProjectDescription>
+    <StartDate>01-06-2019</StartDate>
+    <EndDate>13-06-2019</EndDate>
+    <ToDoLimit>9</ToDoLimit>
+    <WorkInProgressLimit>3</WorkInProgressLimit>
+    <DoneLimit>9</DoneLimit>
+  </Project>
+  <Project>
+    <ProjectId>6</ProjectId>
+    <ProjectTitle>Javascript program</ProjectTitle>
+    <ProjectDescription>Do javascript programs as discuss in last class</ProjectDescription>
+    <StartDate>21-06-2019</StartDate>
+    <EndDate>23-06-2019</EndDate>
+    <ToDoLimit>3</ToDoLimit>
+    <WorkInProgressLimit>2</WorkInProgressLimit>
+    <DoneLimit>3</DoneLimit>
+  </Project>
+  <Project>
+    <ProjectId>7</ProjectId>
+    <ProjectTitle>weekend party</ProjectTitle>
+    <ProjectDescription>plan a weekend party with college friends</ProjectDescription>
+    <StartDate>19-06-2019</StartDate>
+    <EndDate>30-06-2019</EndDate>
+    <ToDoLimit>5</ToDoLimit>
+    <WorkInProgressLimit>2</WorkInProgressLimit>
+    <DoneLimit>5</DoneLimit>
+  </Project>
+  <Project>
+    <ProjectId>8</ProjectId>
+    <ProjectTitle>MBA</ProjectTitle>
+    <ProjectDescription>apply for MBA programs</ProjectDescription>
+    <StartDate>17-05-2018</StartDate>
+    <EndDate>28-05-2019</EndDate>
+    <ToDoLimit>4</ToDoLimit>
+    <WorkInProgressLimit>1</WorkInProgressLimit>
+    <DoneLimit>4</DoneLimit>
+  </Project>
+  <Project>
+    <ProjectId>9</ProjectId>
+    <ProjectTitle>Buy laptop</ProjectTitle>
+    <ProjectDescription>buy new laptop</ProjectDescription>
+    <StartDate>20-06-2019</StartDate>
+    <EndDate>30-06-2019</EndDate>
+    <ToDoLimit>2</ToDoLimit>
+    <WorkInProgressLimit>1</WorkInProgressLimit>
+    <DoneLimit>2</DoneLimit>
+  </Project>
+  <Project>
+    <ProjectId>10</ProjectId>
+    <ProjectTitle>find job </ProjectTitle>
+    <ProjectDescription>apply for jobs on job portals </ProjectDescription>
+    <StartDate>14-06-2019</StartDate>
+    <EndDate>16-06-2019</EndDate>
+    <ToDoLimit>3</ToDoLimit>
+    <WorkInProgressLimit>1</WorkInProgressLimit>
+    <DoneLimit>3</DoneLimit>
+  </Project>
+</ArrayOfProject>

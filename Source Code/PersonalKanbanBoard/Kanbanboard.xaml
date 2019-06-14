@@ -1,0 +1,94 @@
+﻿<Window x:Class="PersonalKanbanBoard.Kanbanboard"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PersonalKanbanBoard"
+        mc:Ignorable="d"
+        Loaded="Window_Loaded"
+        Title="Kanban Board"  Height="700" Width="1024">
+    <Grid Background="#FDFEFE">
+        <Grid Name="todo" Margin="10,92,2,4" RenderTransformOrigin="0.488,0.607">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="223*"/>
+                <ColumnDefinition Width="108*"/>
+                <ColumnDefinition Width="673*"/>
+            </Grid.ColumnDefinitions>
+            <ListBox Background="#F0F8FF" x:Name="taskstodo" Height="447" VerticalAlignment="Top" HorizontalContentAlignment="Center" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="28,46,43,0" SelectionChanged="Taskstodo_SelectionChanged" Grid.ColumnSpan="2" >
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <!--<WrapPanel/>-->
+                        <UniformGrid Columns="1" />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border Background="#FDFEFE" BorderBrush="Black" BorderThickness="1" Width="220" Height="110" Padding="10"  Margin="10">
+                            <StackPanel Name="stk" Orientation="Vertical">
+                                <TextBlock FontFamily ="Georgia" FontSize="12" Text="{Binding TaskId}" Height="38" Width="100" Margin="-90,2,0,8"   TextAlignment="Center"/>
+                                <TextBlock FontFamily ="Georgia" FontSize="16" Text="{Binding TaskTitle}" Height="38" Width="Auto"  TextAlignment="Left" Margin="0,-20,0,0"  TextWrapping="Wrap"  />
+                                <TextBlock FontFamily ="Georgia" FontSize="12" Text="{Binding TaskPriority}" Height="38" Width="100"  TextAlignment="Center" Margin="55,-15,0,10"  TextWrapping="Wrap" />
+                                <Label FontFamily ="Georgia" FontSize="12" Content="Task Priority:" Height="38" Width="Auto"  Margin="-5,-67,0,0" />
+                                <Label FontFamily ="Georgia" FontSize="12" Content="Task Id:" Height="38" Width="Auto" Margin="-5,-140,0,25" />
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ListBox>
+            <ListBox Background="#F0F8FF"  x:Name="tasksinprogress" Height="447" VerticalAlignment="Top" HorizontalContentAlignment="Center" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="41,46,372,0" SelectionChanged="Tasksinprogress_SelectionChanged" Grid.Column="2" >
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <!--<WrapPanel/>-->
+                        <UniformGrid Columns="1" />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border Background="#FDFEFE" BorderBrush="Black" BorderThickness="1" Width="220" Height="80" Padding="10"  Margin="10">
+                            <StackPanel Name="stk" Orientation="Vertical">
+                                <TextBlock FontFamily ="Georgia" FontSize="16" Text="{Binding TaskTitle}" Height="38" Width="100"  TextAlignment="Center" Margin="0,0"  TextWrapping="Wrap"  />
+                                <TextBlock FontFamily ="Georgia" FontSize="12" Text="{Binding TaskPriority}" Height="38" Width="Auto"  TextAlignment="Center" Margin="55,-1,0,10"  TextWrapping="Wrap" />
+                                <Label FontFamily ="Georgia" FontSize="12" Content="Task Priority:" Height="38" Width="Auto"  Margin="22,-67,0,0" />
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ListBox>
+            <ListBox Background="#F0F8FF"   x:Name="tasksdone" Height="447" VerticalAlignment="Top" HorizontalContentAlignment="Center" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="383,46,30,0" SelectionChanged="Tasksdone_SelectionChanged" Grid.Column="2" >
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <!--<WrapPanel/>-->
+                        <UniformGrid Columns="1" />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border Background="#FDFEFE" BorderBrush="Black" BorderThickness="1" Width="220" Height="80" Padding="10"  Margin="10">
+                            <StackPanel Name="stk" Orientation="Vertical">
+                                <TextBlock FontFamily ="Georgia" FontSize="16" Text="{Binding TaskTitle}" Height="38" Width="Auto" TextAlignment="Center" Margin="10,0"  TextWrapping="Wrap"  />
+                                <TextBlock FontFamily ="Georgia" FontSize="12" Text="{Binding TaskPriority}" Height="38" Width="100"  TextAlignment="Center" Margin="55,-1,0,10"  TextWrapping="Wrap" />
+                                <Label FontFamily ="Georgia" FontSize="12" Content="Task Priority:" Height="38" Width="Auto"  Margin="22,-67,0,0" />
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ListBox>
+            <Rectangle Fill="#3498DB" HorizontalAlignment="Left" Height="52" Stroke="Black" VerticalAlignment="Top" Width="1024" Margin="-12,-95,-8,0" Grid.ColumnSpan="3"/>
+            <Label  FontFamily="Georgia" Content="KANBAN BOARD" HorizontalAlignment="Left" Margin="81,-82,0,616" FontSize="22" Width="192" RenderTransformOrigin="0.434,0.511" Grid.Column="2"/>
+
+            <Button FontSize="20" Background="#3498DB" FontFamily ="Georgia" VerticalAlignment="Top" Height="41" Width="157" Name="createtask" Content="Create Task" HorizontalAlignment="Left"   Click="createtask_Click" Margin="96,511,0,0" Grid.Column="2" />
+            <Button Background="White" FontFamily ="Georgia" VerticalAlignment="Top" Height="21" Width="91" Name="gotoProjectboard" Content="Project Board" HorizontalAlignment="Left"   Click="GotoProjectboard_Click" Margin="481,-82,0,0" Grid.Column="2" />
+        </Grid>
+        <StackPanel Name="prodetail" Margin="0,50,0,531">
+            <Label FontFamily="Georgia" FontSize="19" Content="Project:" HorizontalAlignment="Left" Height="35" Margin="10,5,0,0" Width="80"/>
+            <TextBlock FontFamily="Georgia" Width="Auto" FontSize="20" x:Name="projecttitle" Text="{Binding ProjectTitle}" Margin="90,-31,650,0"/>
+            <Label FontFamily="Georgia" FontSize="16" Content="No. of Task limit in TODO:" Margin="35,20,774,0" Height="28"/>
+            <TextBlock FontFamily="Georgia" FontSize="18" Name="todolimit" Text="{Binding ToDoLimit}" Margin="235,-33,715,0" Height="22"/>
+            <Label FontFamily="Georgia" FontSize="16" Content="No. of Task limit in WIP:" Margin="383,-33,440,0" Height="27"/>
+            <TextBlock FontFamily="Georgia" FontSize="18" Name="wiplimit" Text="{Binding WorkInProgressLimit}" Margin="569,-28,410,0" />
+            <Label FontFamily="Georgia" FontSize="16" Content="No. of Task limit in DONE:" Margin="720,-34,92,0" Height="26"/>
+            <TextBlock FontFamily="Georgia" FontSize="18" Name="donelimit" Text="{Binding DoneLimit}" Margin="921,-28,61,0" />
+        </StackPanel>
+    </Grid>
+</Window>
+

@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<ArrayOfTask xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Task>
+    <TaskId>1</TaskId>
+    <TaskTitle>planning</TaskTitle>
+    <TaskDescription>develop the plan for develop of the application</TaskDescription>
+    <TaskPriority>Medium</TaskPriority>
+    <TaskNotes>list down the stages to complete the project</TaskNotes>
+    <TaskStatus>done</TaskStatus>
+    <ProjectId>5</ProjectId>
+  </Task>
+  <Task>
+    <TaskId>2</TaskId>
+    <TaskTitle>Concept </TaskTitle>
+    <TaskDescription>create the concept for solving the problem statement</TaskDescription>
+    <TaskPriority>Medium</TaskPriority>
+    <TaskNotes>write briefly about the concept</TaskNotes>
+    <TaskStatus>done</TaskStatus>
+    <ProjectId>5</ProjectId>
+  </Task>
+  <Task>
+    <TaskId>3</TaskId>
+    <TaskTitle>wireframes</TaskTitle>
+    <TaskDescription>develop wireframes inorder to have practical view of the concept</TaskDescription>
+    <TaskPriority>Medium</TaskPriority>
+    <TaskNotes>create wireframes for all the windows and workflows</TaskNotes>
+    <TaskStatus>done</TaskStatus>
+    <ProjectId>5</ProjectId>
+  </Task>
+  <Task>
+    <TaskId>4</TaskId>
+    <TaskTitle>Approval</TaskTitle>
+    <TaskDescription>get approval for wireframes</TaskDescription>
+    <TaskPriority>Medium</TaskPriority>
+    <TaskNotes>get approval from professor and other batch mates</TaskNotes>
+    <TaskStatus>done</TaskStatus>
+    <ProjectId>5</ProjectId>
+  </Task>
+  <Task>
+    <TaskId>5</TaskId>
+    <TaskTitle>Implementation</TaskTitle>
+    <TaskDescription>start the implementation of the application</TaskDescription>
+    <TaskPriority>Low</TaskPriority>
+    <TaskNotes>makes changes given in approval if necessary</TaskNotes>
+    <TaskStatus>done</TaskStatus>
+    <ProjectId>5</ProjectId>
+  </Task>
+  <Task>
+    <TaskId>6</TaskId>
+    <TaskTitle>Demo</TaskTitle>
+    <TaskDescription>Show the progress and get the feedback</TaskDescription>
+    <TaskPriority>Low</TaskPriority>
+    <TaskNotes>note down the feedback points </TaskNotes>
+    <TaskStatus>todo</TaskStatus>
+    <ProjectId>5</ProjectId>
+  </Task>
+  <Task>
+    <TaskId>7</TaskId>
+    <TaskTitle>Implement Task module</TaskTitle>
+    <TaskDescription>add/update and delete task functionality in the application</TaskDescription>
+    <TaskPriority>Low</TaskPriority>
+    <TaskNotes>add/update and delete task functionality in the application and see the impact</TaskNotes>
+    <TaskStatus>todo</TaskStatus>
+    <ProjectId>5</ProjectId>
+  </Task>
+  <Task>
+    <TaskId>8</TaskId>
+    <TaskTitle>Add task Dependency</TaskTitle>
+    <TaskDescription>Add Task Dependency module</TaskDescription>
+    <TaskPriority>Low</TaskPriority>
+    <TaskNotes>Add Task Dependency module and perform impact analysis</TaskNotes>
+    <TaskStatus>todo</TaskStatus>
+    <ProjectId>5</ProjectId>
+  </Task>
+  <Task>
+    <TaskId>9</TaskId>
+    <TaskTitle>look option</TaskTitle>
+    <TaskDescription>look for availiable options</TaskDescription>
+    <TaskPriority>Low</TaskPriority>
+    <TaskNotes>look for availiable options</TaskNotes>
+    <TaskStatus>todo</TaskStatus>
+    <ProjectId>9</ProjectId>
+  </Task>
+  <Task>
+    <TaskId>10</TaskId>
+    <TaskTitle>compare option</TaskTitle>
+    <TaskDescription>compare option and shortlist them</TaskDescription>
+    <TaskPriority>Low</TaskPriority>
+    <TaskNotes>compare option</TaskNotes>
+    <TaskStatus>todo</TaskStatus>
+    <ProjectId>9</ProjectId>
+  </Task>
+  <Task>
+    <TaskId>11</TaskId>
+    <TaskTitle>List programs</TaskTitle>
+    <TaskDescription>List all the programs and apply</TaskDescription>
+    <TaskPriority>Low</TaskPriority>
+    <TaskNotes>List all the programs and apply</TaskNotes>
+    <TaskStatus>todo</TaskStatus>
+    <ProjectId>8</ProjectId>
+  </Task>
+  <Task>
+    <TaskId>12</TaskId>
+    <TaskTitle>update the cv</TaskTitle>
+    <TaskDescription>update the new skill</TaskDescription>
+    <TaskPriority>Medium</TaskPriority>
+    <TaskNotes>add c# and Wpf as skill</TaskNotes>
+    <TaskStatus>todo</TaskStatus>
+    <ProjectId>10</ProjectId>
+  </Task>
+</ArrayOfTask>

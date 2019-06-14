@@ -1,0 +1,50 @@
+﻿<Window x:Class="PersonalKanbanBoard.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PersonalKanbanBoard"
+        mc:Ignorable="d"
+        Loaded="Window_Loaded"
+        Background="Black"
+        Title="Personal Kanban Board" Height="700" Width="1024">
+    <Grid Background="#FDFEFE">
+        <Grid Background="#FDFEFE" Margin="10,95,2,4" RenderTransformOrigin="0.488,0.607">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0*"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="122*"/>
+                <ColumnDefinition Width="129*"/>
+            </Grid.ColumnDefinitions>
+            <ListBox BorderBrush="Black"  BorderThickness="1" Background="	#F0F8FF" x:Name="Projectlistview" Height="502" VerticalAlignment="Top" HorizontalContentAlignment="Center" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="3,-21,10,0" Grid.RowSpan="2" Grid.ColumnSpan="2" SelectionChanged="Projectlistview_SelectionChanged"  >
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <!--<WrapPanel/>-->
+                        <UniformGrid Columns="4" />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border  Background="#FDFEFE" BorderBrush="Black" BorderThickness="2" Width="200" Height="120" Padding="10"  Margin="10">
+                            <StackPanel  Name="stk" Orientation="Vertical">
+                                <TextBlock FontFamily ="Georgia" FontSize="12" Text="{Binding ProjectId}"  Width="Auto"  TextAlignment="Center" Margin="-170,-5,0,0" />
+                                <Label FontFamily ="Georgia" FontSize="12"  HorizontalAlignment="Left" VerticalAlignment="Center"  Content="Start Date:"  Margin="17,1,0,0" Height="21.113"/>
+                                <TextBlock FontFamily ="Georgia" FontSize="14" Text="{Binding StartDate}"   TextAlignment="Left" Height="21.113"  Margin="81,-19,0,0"  />
+                                <TextBlock FontFamily ="Georgia" FontSize="20" Text="{Binding ProjectTitle}" Height="26.887" Width="Auto"  TextAlignment="Center" Margin="0,8" />
+                                <TextBlock FontFamily ="Georgia" FontSize="14" Text="{Binding EndDate}" Width="Auto"  Margin="81,0,0,-5" />
+                                <Label FontFamily ="Georgia" FontSize="12"  HorizontalAlignment="Left" VerticalAlignment="Center"  Content="End Date:"   Height="23" Margin="17,-15,5,0" Width="65"/>
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ListBox>
+            <Rectangle Fill="#3498DB" HorizontalAlignment="Left" Height="52" Stroke="Black" VerticalAlignment="Top" Width="1024" Margin="-12,-95,-8,0" Grid.ColumnSpan="2"/>
+            <Label  FontFamily="Georgia" Content="PROJECTS BOARD" HorizontalAlignment="Left" Margin="402,-77,0,32" FontSize="22" Width="212" Grid.ColumnSpan="2" RenderTransformOrigin="0.434,0.511"/>
+            <Button FontSize="20" Background="#3498DB" FontFamily ="Georgia" x:Name="btn_createproject" Content="Create Project" HorizontalAlignment="Left" Margin="402,500,0,0" VerticalAlignment="Top" Width="165" Height="48" Click="Btn_createproject_Click" RenderTransformOrigin="0.509,-0.042" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+            <TextBox  VerticalContentAlignment="Center" FontFamily="Georgia" ToolTip="Enter Project No. to view details"  Name="findprojectids" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="259,-75,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="160" RenderTransformOrigin="0.712,0.542"  />
+            <Button Background="White" FontSize="10" FontFamily ="Georgia" Name="findproject" Content="search" Grid.Column="1" HorizontalAlignment="Left" Margin="424,-76,0,0" VerticalAlignment="Top" Width="35" Height="24" Click="Findproject_Click"/>
+        </Grid>
+    </Grid>
+</Window>

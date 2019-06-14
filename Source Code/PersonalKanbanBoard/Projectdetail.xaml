@@ -1,0 +1,39 @@
+﻿<Window x:Class="PersonalKanbanBoard.Projectdetail"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PersonalKanbanBoard"
+        mc:Ignorable="d"
+         Title="ProjectDetails" Height="700" Width="1024">
+    <Grid>
+        <StackPanel Name="projectdetailsstk">
+            <Grid Height="666" VerticalAlignment="Top">
+                <Label FontFamily ="Georgia" FontSize="20" Content="Project Title" HorizontalAlignment="Left" Margin="204,138,0,0" VerticalAlignment="Top"/>
+                <Label FontFamily ="Georgia" FontSize="20" Content="Project Description" HorizontalAlignment="Left" Margin="204,199,0,0" VerticalAlignment="Top"/>
+                <Label FontFamily ="Georgia" FontSize="20" Content="Start Date" HorizontalAlignment="Left" Margin="204,303,0,0" VerticalAlignment="Top"/>
+                <Label FontFamily ="Georgia" FontSize="20" Content="End Date" HorizontalAlignment="Left" Margin="204,347,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.214,1.558"/>
+                <Label FontFamily ="Georgia" FontSize="20" Content="Set To Do Limit" HorizontalAlignment="Left" Margin="204,392,0,0" VerticalAlignment="Top"/>
+                <Label FontFamily ="Georgia" FontSize="20" Content="Set Work In Progress Limit" HorizontalAlignment="Left" Margin="204,443,0,0" VerticalAlignment="Top"/>
+                <Label FontFamily ="Georgia" FontSize="20" Content="Set Done Limit" HorizontalAlignment="Left" Margin="204,503,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.847,1.344"/>
+                <TextBox FontFamily ="Georgia" FontSize="20" Text="{Binding Path=ProjectTitle}" x:Name="projectTitle" HorizontalAlignment="Left" Height="34" Margin="592,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="356"/>
+                <DatePicker FontFamily ="Georgia" FontSize="20" Text="{Binding Path=StartDate}" x:Name="startDate" HorizontalAlignment="Left" Margin="592,303,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.049,0.82"/>
+                <DatePicker FontFamily ="Georgia" FontSize="20" Text="{Binding Path=EndDate}" x:Name="endDate" HorizontalAlignment="Left" Margin="592,347,0,0" VerticalAlignment="Top"/>
+                <TextBox FontFamily ="Georgia" FontSize="20" Text="{Binding Path=ProjectDescription}" x:Name="projectDescription" HorizontalAlignment="Left" Height="74" Margin="592,199,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="356"/>
+                <TextBox FontFamily ="Georgia" FontSize="20" Text="{Binding Path=ToDoLimit}" x:Name="toDoLimit" HorizontalAlignment="Left" Height="34" Margin="592,392,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="356" RenderTransformOrigin="0.493,1.206"/>
+                <TextBox FontFamily ="Georgia" FontSize="20" Text="{Binding Path=WorkInProgressLimit}" x:Name="workInProgressLimit" HorizontalAlignment="Left" Height="34" Margin="592,443,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="356"/>
+                <TextBox FontFamily ="Georgia" FontSize="20" Text="{Binding Path=DoneLimit}" x:Name="doneLimit" HorizontalAlignment="Left" Height="34" Margin="592,503,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="356"/>
+                <Button FontFamily ="Georgia" Background="#3498DB" x:Name="btn_updateproject" Content="Update Project" HorizontalAlignment="Left" Margin="253,563,0,0" VerticalAlignment="Top" Width="132" Height="39" Click="Btn_updateproject_Click"/>
+                <Button FontFamily ="Georgia" Background="#3498DB" x:Name="btn_Cancel" Content="Cancel" HorizontalAlignment="Left" Margin="592,562,0,0" VerticalAlignment="Top" Width="148" Height="40" Click="Btn_Cancel_Click"/>
+                <Label FontFamily ="Georgia" FontSize="20"   x:Name="successMsg" Content="Project Created Successfully" HorizontalAlignment="Left" Margin="103,494,0,0" VerticalAlignment="Top" Width="219" Height="43" Background="#FFFB2424" Foreground="Black" Visibility="Hidden"/>
+                <Rectangle Fill="#3498DB" HorizontalAlignment="Left" Height="45" Stroke="Black" VerticalAlignment="Top" Width="1016"/>
+                <Label FontFamily ="Georgia" FontSize="20" Content="PROJECT DETAILS" HorizontalAlignment="Left" Margin="384,0,0,0" VerticalAlignment="Top" Height="45"  Width="212"/>
+                <Button BorderThickness="2" BorderBrush="Black" FontFamily ="Georgia" VerticalContentAlignment="Top" Background="White" Content="Delete Project" FontSize="12" x:Name="btn_deleteproject"  HorizontalAlignment="Left" Margin="864,10,0,0" VerticalAlignment="Top" Width="84" Height="22" Click="Btn_deleteproject_Click" RenderTransformOrigin="0.5,0.864"/>
+                <TextBlock FontFamily ="Georgia" FontSize="20" Width="356" Text="{Binding Path=ProjectId}" Name="getprojectid" HorizontalAlignment="Left" Margin="592,77,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Height="34"/>
+                <Label FontFamily ="Georgia" FontSize="20" Content="Project No." HorizontalAlignment="Left" Margin="204,78,0,0" VerticalAlignment="Top" Width="113"/>
+            </Grid>
+        </StackPanel>
+        <Label Foreground="Red" FontFamily ="Georgia"  FontSize="9"  Content="*All Fields are mandatory" HorizontalAlignment="Left" Margin="587,49,0,0" VerticalAlignment="Top" Width="167"/>
+
+    </Grid>
+</Window>
